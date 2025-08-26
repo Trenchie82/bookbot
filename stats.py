@@ -16,3 +16,13 @@ def characters(text):
             char_dict[char] = 1
     return char_dict
     
+def sort_on(char):
+    return char["num"]
+
+
+def descend(characters):
+    dict_list = []
+    for chars, nums in characters.items():
+        dict_list.append({"chars": chars, "num": nums})
+    dict_list.sort(reverse = True, key = sort_on)
+    return dict_list
